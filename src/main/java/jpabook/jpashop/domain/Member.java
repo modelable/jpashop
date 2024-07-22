@@ -15,10 +15,10 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
-    private String name;
+    private String name; //회원명
 
     @Embedded
-    private Address address;
+    private Address address; //주소
 
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
